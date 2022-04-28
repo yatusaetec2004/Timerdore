@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <gradient android:startColor="@color/light_green1"
+                        android:endColor="#4DC503" android:angle="-45"/>
+                    <stroke android:width="1dp" android:color="@color/green" />
+                    <size android:width="25dp" android:height="25dp" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/ic_check"/>
+        </layer-list>
+    </item>
+
+    <item android:state_checked="false">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <gradient android:startColor="@color/cPrimaryLight"
+                        android:endColor="@color/cPrimaryDark" android:angle="-45"/>
+                    <stroke android:width="1dp" android:color="@color/cPrimaryDark" />
+                    <size android:width="15dp" android:height="15dp" />
+                </shape>
+            </item>
+            <item android:drawable="@android:drawable/ic_menu_close_clear_cancel" android:gravity="center"/>
+        </layer-list>
+    </item>
+</selector>

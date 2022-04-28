@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Timerdore</string>
+    <string-array name="break_minutes_selection">
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+    </string-array>
+    <string-array name="sort_history_selection">
+        <item>Más recientes primero</item>
+        <item>Más antigüos primero</item>
+    </string-array>
+</resources>

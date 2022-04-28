@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textAlertSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#FA0404"
+        android:text="No puedes editar algunas opciones mientras haya un pomodoro en curso"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/enableNotificationVibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vibración de notificación"
+        android:textSize="15sp"
+        app:track="@drawable/track1"
+        android:thumb="@drawable/thumb1"
+        app:switchPadding="15dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Permitir que la notificación vibre cada vez que se haga una transición de ciclo"
+        android:textColor="@color/gray1"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/onlyAlertOnce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar solo una vez"
+        android:textSize="15sp"
+        app:track="@drawable/track1"
+        android:thumb="@drawable/thumb1"
+        app:switchPadding="15dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Si se activa, solo se mostrará una vez la notificacíon de transición de ciclo en pantalla"
+        android:textColor="@color/gray1"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/showHistoryDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostrar descripción en el historial"
+        android:textSize="15sp"
+        app:track="@drawable/track1"
+        android:thumb="@drawable/thumb1"
+        app:switchPadding="15dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Si el pomodoro tiene descripción, se muestra por debajo del título en el historial"
+        android:textColor="@color/gray1"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/enableAnimations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animaciones"
+        android:textSize="15sp"
+        android:checked="true"
+        app:track="@drawable/track1"
+        android:thumb="@drawable/thumb1"
+        app:switchPadding="15dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usar animaciones dentro de la aplicación"
+        android:textColor="@color/gray1"/>
+
+</LinearLayout>

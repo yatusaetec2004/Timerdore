@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_sheet_peek">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/progressPomodore"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:indeterminateOnly="false"
+            android:progress="100"
+            android:progressDrawable="@drawable/circle_progress1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6"
+            tools:progress="80" />
+
+        <TextView
+        android:id="@+id/cycleTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="@color/black"
+            android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="@+id/progressPomodore"
+        app:layout_constraintEnd_toEndOf="@+id/progressPomodore"
+        app:layout_constraintStart_toStartOf="@+id/progressPomodore"
+        app:layout_constraintTop_toTopOf="@+id/progressPomodore" />
+
+        <TextView
+            android:id="@+id/currentCycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ciclo"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.159" />
+
+        <Button
+        android:id="@+id/btnOkClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+        <TextView
+            android:id="@+id/textWorkCycles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ciclos de trabajo: "
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.025"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.058" />
+
+        <TextView
+            android:id="@+id/textBreakCycles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ciclos de descanso: "
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.980"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.051" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

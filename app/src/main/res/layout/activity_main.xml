@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activities.MainActivity"
+    android:paddingTop="25dp">
+
+    <TextView
+        android:id="@+id/textCurrentTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="No hay una tarea seleccionada"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <ProgressBar
+        style="@style/VerticalMargin1"
+        android:visibility="gone"
+        android:id="@+id/quickProgressPomodore"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:indeterminateOnly="false"
+        android:progress="100"
+        android:background="@drawable/border_layout1"
+        android:padding="12dp"
+        android:progressDrawable="@drawable/circle_progress1"
+        tools:progress="100"/>
+
+    <LinearLayout
+        android:id="@+id/configureBreakLayout"
+        style="@style/HorizontalMargin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/border_layout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurar descanso del 4to ciclo:"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            />
+
+        <Spinner
+            android:id="@+id/spinnerConfigureTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCreatePomodore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear tarea"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="8dp">
+
+        <ImageButton
+            style="@style/HorizontalMargin1.ImageButtonStyle1"
+            android:id="@+id/startPomodore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_play_arrow"
+            android:contentDescription="Empezar ciclo"
+            />
+
+        <ImageButton
+            style="@style/HorizontalMargin1.ImageButtonStyle1"
+            android:id="@+id/stopPomodore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_stop"
+            android:visibility="gone"
+            android:contentDescription="Detener ciclo"
+            />
+
+        <ImageButton
+            android:id="@+id/nextPomodoreCycle"
+            android:layout_width="wrap_content"
+            style="@style/HorizontalMargin1.ImageButtonStyle1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next"
+            android:visibility="gone"
+            android:contentDescription="Siguiente Ciclo"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textInfo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tareas guardadas:"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        style="@style/VerticalMargin1"/>
+
+    <ListView
+        android:id="@+id/savedPomodores"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="none"/>
+
+</LinearLayout>
