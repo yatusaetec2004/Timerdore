@@ -442,7 +442,6 @@ class MainActivity : AppCompatActivity() {
         if(firstEnter){
             fakeListItems()
             enableWidgetsForIntro(false)
-            addDefaultSettings()
             val dialog = AlertDialog.Builder(this).apply {
                 setTitle("Bienvenido a Timerdore")
                 setMessage("Se te dará a continuación un tutorial rápido explicando como usar la aplicación. Dale click a " +
@@ -520,10 +519,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-    }
-
-    private fun addDefaultSettings(){
-        settings.setBoolean(AppSettings.ENABLE_ANIMATIONS, true)
     }
 
     private fun createTapTarget(view: View, primaryText: CharSequence, secondaryText: CharSequence,

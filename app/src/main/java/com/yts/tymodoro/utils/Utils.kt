@@ -7,11 +7,11 @@ import android.content.Intent
 import android.os.Build
 import androidx.core.app.NotificationCompat
 import androidx.core.util.rangeTo
-
-import com.yts.tymodoro.App.Companion.CHANNEL_ID
+import com.yts.tymodoro.App
 import com.yts.tymodoro.App.Companion.CHANNEL_NAME
 import com.yts.tymodoro.R
 import com.yts.tymodoro.activities.MainActivity
+import com.yts.tymodoro.providers.AppSettings
 
 fun generateRandom(stringLength: Int):String{
     val allowerChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
@@ -24,8 +24,9 @@ fun generateRandom(stringLength: Int):String{
 
 fun buildRunningNotification(context: Context, contentText: String, openClass: Class<out Activity> = MainActivity::class.java): NotificationCompat.Builder {
     val openIntent = Intent(context, openClass)
+    val settings = AppSettings(context)
     val pendingIntent = PendingIntent.getActivity(context, 0, openIntent, PendingIntent.FLAG_UPDATE_CURRENT)
-    val myNotification = NotificationCompat.Builder(context, CHANNEL_ID)
+    val myNotification = NotificationCompat.Builder(context, settings.getString(AppSettings.CURRENT_NOTIF_ID))
     myNotification.setContentTitle("Timerdore")
     myNotification.setContentText(contentText)
     myNotification.setSmallIcon(R.drawable.ic_clock_white)

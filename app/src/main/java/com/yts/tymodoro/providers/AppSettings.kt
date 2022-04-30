@@ -5,6 +5,9 @@ import android.content.Context
 class AppSettings(context: Context) {
 
     companion object {
+        //Keys for Strings
+        const val CURRENT_NOTIF_ID = "currentNotifId"
+
         //Keys for Integers
         const val FOURTH_CYCLE_BREAK = "4thCycleBreak"
         const val BREAK_SPINNER_SELECTION = "breakSpinnerSelection"
@@ -29,5 +32,9 @@ class AppSettings(context: Context) {
 
     fun setDecimalNumber(key: String, value: Double) = settings.edit().putLong(key, value.toBits()).apply()
 
-    fun getDecimalNumber(key: String, defValue: Double): Double = Double.fromBits(settings.getLong(key, defValue.toLong()))
+    fun getDecimalNumber(key: String, defValue: Double = 0.0): Double = Double.fromBits(settings.getLong(key, defValue.toLong()))
+
+    fun setString(key: String, value: String) = settings.edit().putString(key, value).apply()
+
+    fun getString(key: String, defValue: String = ""): String = settings.getString(key, defValue)!!
 }

@@ -73,14 +73,11 @@ class OptionsActivity: AppCompatActivity() {
 
     private fun modifyChannelSettings(enableVibrations: Boolean){
         ifSdkIsGreaterOrEqual(Build.VERSION_CODES.O){
-            val manager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
-            val channel = manager.getNotificationChannel(App.CHANNEL_ID)
-            channel.apply {
-                enableVibration(enableVibrations)
-                vibrationPattern = App.VIBRATION_PATTERN1
+            if(enableVibrations) {
+                App.createVibrationNotifChannel(this)
+            } else {
+                App.createNoVibrationNotifChannel(this)
             }
-            manager.deleteNotificationChannel(App.CHANNEL_ID)
-            manager.createNotificationChannel(channel)
         }
     }
 
