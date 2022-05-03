@@ -53,8 +53,6 @@ class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
 
-    // TODO: Cambiarle el icono a la app y terminar
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
