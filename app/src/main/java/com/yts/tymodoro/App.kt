@@ -68,6 +68,7 @@ class App : Application() {
             settings.setBoolean(AppSettings.ENABLE_ANIMATIONS, true)
             settings.setBoolean(AppSettings.ENABLE_NOTIF_VIBRATE, true)
             settings.setBoolean("defaults", true)
+            createVibrationNotifChannel(this)
         }
     }
 }
